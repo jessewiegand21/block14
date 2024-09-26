@@ -38,6 +38,7 @@ console.log(`The odd numbers you gave are ${getOdds(numbers)}.`);
  */
 function getLength(numbers) {
   // TODO
+    return(numbers.length)
 }
 
 /**
@@ -46,6 +47,11 @@ function getLength(numbers) {
  */
 function getSum(numbers) {
   // TODO
+    let sum = 0;
+    for (let i = 0; i < numbers.length; i++ )
+    sum += numbers[i]
+    return(sum)
+    
 }
 
 /**
@@ -54,6 +60,10 @@ function getSum(numbers) {
  */
 function getMean(numbers) {
   // TODO
+  let sum = 0
+  for (let i = 0; i < numbers.length; i++ )
+  sum += numbers[i]
+  return sum / numbers.length;
 }
 
 /**
@@ -62,6 +72,7 @@ function getMean(numbers) {
  */
 function getMin(numbers) {
   // TODO
+    return (Math.min(...numbers))
 }
 
 /**
@@ -70,6 +81,7 @@ function getMin(numbers) {
  */
 function getMax(numbers) {
   // TODO
+    return(Math.max(...numbers))
 }
 
 /**
@@ -78,6 +90,9 @@ function getMax(numbers) {
  */
 function getRange(numbers) {
   // TODO
+    const max = (Math.max(...numbers))
+    const min = (Math.min(...numbers))
+    return max - min;
 }
 
 /**
@@ -86,7 +101,17 @@ function getRange(numbers) {
  */
 function getEvens(numbers) {
   // TODO
+  const evenNumbers = []
+  for (let i = 0; i < numbers.length; i++)
+    if (numbers[i] % 2 == 0){
+      evenNumbers.push(numbers[i])
+    }
+  return evenNumbers;
 }
+
+
+  
+
 
 /**
  * @param {number[]} numbers an array of integers
@@ -94,4 +119,10 @@ function getEvens(numbers) {
  */
 function getOdds(numbers) {
   // TODO
+  oddNumbers =[]
+  for (let i = 0; i<numbers.length; i++)
+    if (numbers[i] % 2 !==0){
+      oddNumbers.push(numbers[i])
+    }
+    return oddNumbers;
 }
